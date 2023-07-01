@@ -1,3 +1,12 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": ["next/core-web-vitals", "airbnb"],
+  "overrides": [
+    {
+      "files": ["*.ts*"],
+      "rules": {
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".tsx"] }],
+        "no-shadow": "off"
+      }
+    }
+  ]
 }
