@@ -2,6 +2,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import React from 'react';
 import styles from './NavMenu.module.css';
+import { SignInButton, SignOutButton } from '@/components/buttons';
+import AuthCheck from '@/components/AuthCheck';
 
 export default function NavMenu(): React.ReactNode {
   return (
@@ -23,6 +25,14 @@ export default function NavMenu(): React.ReactNode {
         </li>
         <li>
           <Link href="/users">Users</Link>
+        </li>
+        <li>
+          <SignInButton />
+        </li>
+        <li>
+          <AuthCheck>
+            <SignOutButton />
+          </AuthCheck>
         </li>
       </ul>
     </nav>
